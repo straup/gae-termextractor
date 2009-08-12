@@ -2,4 +2,17 @@ This is a super-duper thin Google AppEngine API wrapper around the topia term
 extractor.
 
 The short version is, you call it by passing a 'text' parameter (GET or POST)
-and an optional 'format' parameter ('xml' or 'json').
+and an optional 'format' parameter ('xml' or 'json'). Like this:
+
+	http://localhost/terms?text=this+is+the+network+of+our+disconnect
+
+Which would return:
+
+	<rsp stat="ok">
+		<terms query="this is the network of our disconnect">
+			<term strength="1" occurrence="1" value="network"/>
+		</terms>
+	</rsp>
+
+Currently, all the dependencies (topia, zope, APIApp) are bundled with this
+package. That seems kind of dumb and may change in time. We'll see...
