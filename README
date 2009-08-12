@@ -1,0 +1,5 @@
+This is a super-duper thin Google AppEngine API wrapper around the topia term
+extractor.
+
+The short version is, you call it by passing a 'text' parameter (GET or POST)
+and an optional 'format' parameter ('xml' or 'json').
